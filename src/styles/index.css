@@ -1,12 +1,53 @@
 
-/* 
+.wrap{
+    border: 1pt solid black;
+    width: 20rem;
+    min-height: 20rem;
+    margin: auto;
+    margin-top: 5rem;
+    border-radius: 2rem;
+    
+}
+.wrap h3{
+    padding-top: 1rem;
+    text-align: center;
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+}
+.wrap input{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    border-radius: 1rem;
+}
+.wrap input::placeholder{
+    text-align: center;
+}
 
-*/
+.wrap button{
+    display: flex;
+    margin: auto;
+    margin-top: 1rem;
+    border-radius: 2rem;
+}
+
+.task_list{
+    
+
+    margin: auto;
+}
+.delete{
+    cursor: pointer;
+    padding-right: 1rem;
+}
+li{
+    padding-right: 2rem;
+    display: flex;
+    margin: 0.5rem 0 0.5rem 0;
+    vertical-align: middle;
+    justify-content: space-between;
+    border-top: 1pt solid black;
+}
+ul{
+    margin: 0;
+    padding: 1rem 2rem 1rem 2rem;
+}
