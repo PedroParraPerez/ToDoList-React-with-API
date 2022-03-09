@@ -7,25 +7,7 @@ const ToDoList = () => {
 	const [list, setList] = useState([]);
 	const [task, setTask] = useState();
 
-	const HandelSubmit = (e) => {
-		//Para cuando el formulario se envie
-
-		e.preventDefault();
-		setList([...list, task]);
-		setTask("");
-	};
-
-	const Delete = (index) => {
-		let tmp = list;
-		list.splice(index, 1);
-		setList([...tmp]);
-	};
-
-	useEffect(() => {
-		createTodoList();
-	}, [list]);
-
-	const createTodoList = async () => {
+	const createTaskInMyTodoList = async () => {
 		const response = await fetch(
 			"https://assets.breatheco.de/apis/fake/todos/user/pedroparra",
 			{
@@ -39,9 +21,27 @@ const ToDoList = () => {
 					{ label: "Walk the dog", done: false },
 					{ label: "Do the replits", done: false },
 					{ label: "realizar la todo list", done: false },
+					{ label: "asdadad la todo list", done: false },
+					{ label: "asdadad la todo list", done: false },
+					{ label: "asdadad la todo list", done: false },
 				]),
 			}
 		);
+	};
+
+	const Delete = (index) => {
+		let tmp = list;
+		list.splice(index, 1);
+		setList([...tmp]);
+	};
+
+	const HandelSubmit = (e) => {
+		//Para cuando el formulario se envie
+
+		e.preventDefault();
+		setList([...list, task]);
+		setTask("");
+		createTaskInMyTodoList();
 	};
 
 	return (
