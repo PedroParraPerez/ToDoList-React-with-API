@@ -21,6 +21,29 @@ const ToDoList = () => {
 		setList([...tmp]);
 	};
 
+	useEffect(() => {
+		createTodoList();
+	}, [list]);
+
+	const createTodoList = async () => {
+		const response = await fetch(
+			"https://assets.breatheco.de/apis/fake/todos/user/pedroparra",
+			{
+				method: "PUT",
+				headers: {
+					"Content-Type": "application/json",
+					Accept: "application/json",
+				},
+				body: JSON.stringify([
+					{ label: "Make the bed", done: false },
+					{ label: "Walk the dog", done: false },
+					{ label: "Do the replits", done: false },
+					{ label: "realizar la todo list", done: false },
+				]),
+			}
+		);
+	};
+
 	return (
 		<>
 			<div className="wrap">
