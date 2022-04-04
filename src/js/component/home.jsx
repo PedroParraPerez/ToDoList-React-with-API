@@ -12,6 +12,10 @@ const ToDoList = () => {
 		updateTaskList();
 	}, []);
 
+	useEffect(() => {
+		saveTaskInAPI();
+	}, [list]);
+
 	const updateTaskList = () => {
 		fetch("https://assets.breatheco.de/apis/fake/todos/user/pedroparra", {
 			method: "GET",
@@ -27,10 +31,6 @@ const ToDoList = () => {
 				console.log("Error", error);
 			});
 	};
-
-	useEffect(() => {
-		saveTaskInAPI();
-	}, [list]);
 
 	const saveTaskInAPI = () => {
 		fetch("https://assets.breatheco.de/apis/fake/todos/user/pedroparra", {
@@ -59,11 +59,6 @@ const ToDoList = () => {
 		}
 	};
 
-	const deleteTask = (index) => {
-		const newArray = list.filter((item, i) => i != index);
-		setList(newArray);
-		saveTaskInAPI();
-	};
 	const Delete = (index) => {
 		let tmp = list;
 		list.splice(index, 1);
@@ -102,7 +97,7 @@ const ToDoList = () => {
 						onClick={() => {
 							saveTask();
 						}}>
-						Añadir Tarea
+						Add Task
 					</button>
 				</form>
 				<div className="list-tasks">
