@@ -1,53 +1,72 @@
-
+body{
+    background-color: rgb(248, 248, 193);
+}
 .wrap{
-    border: 1pt solid black;
-    width: 20rem;
-    min-height: 20rem;
+    border: 2px solid brown;
+    border-radius: 3rem;
+    width: 17rem;
+    min-height: 30rem;
     margin: auto;
-    margin-top: 5rem;
-    border-radius: 2rem;
-    
-}
-.wrap h3{
-    padding-top: 1rem;
+    margin-top: 2rem;
     text-align: center;
-
+    background-color: rgb(255, 255, 130);
 }
-.wrap input{
-    width: 80%;
-    margin: auto;
-    display: flex;
-    border-radius: 1rem;
-}
-.wrap input::placeholder{
-    text-align: center;
-}
-
-.wrap button{
-    display: flex;
-    margin: auto;
+.title{
     margin-top: 1rem;
-    border-radius: 2rem;
+    color: brown;
+    font-weight: bold;
 }
-
-.task_list{
+.input-task{
     
+    text-align: center;
+    border-radius: 3rem;
+    width: 80%;
+    
+}
+.label-task{
+    font-weight: bold;
+    color: brown;
+}
+.validation{
+    color: red;
 
+}
+.submit{
+
+    background-color: brown;
+    color: white;
+    border-radius: 0.7rem;
+  margin-top: 3%;
+   
+}
+.list-tasks{
+    
+    width: 80%;
+    min-height: 60%;
+    border-radius: 1rem;
     margin: auto;
+    margin-top: 3%;
+
 }
-.delete{
-    cursor: pointer;
-    padding-right: 1rem;
+.delete:hover{
+  cursor: pointer;
 }
-li{
-    padding-right: 2rem;
+
+.tareaa {
     display: flex;
-    margin: 0.5rem 0 0.5rem 0;
-    vertical-align: middle;
+    width: 100%;
+    border-top: 2px solid brown;
     justify-content: space-between;
-    border-top: 1pt solid black;
+    padding: 3.5%;
 }
-ul{
-    margin: 0;
-    padding: 1rem 2rem 1rem 2rem;
+.tareaa p{
+    height: auto;
+    max-width: 80%;
+    margin-bottom:  0%;
+}
+
+
+
+.delete:hover{
+    cursor: pointer;
 }
