@@ -60,9 +60,25 @@ const ToDoList = () => {
 	};
 
 	const Delete = (index) => {
-		let tmp = list;
-		list.splice(index, 1);
-		setList([...tmp]);
+		const newList = list.filter((value, i) => i !== index);
+		setList(newList);
+	};
+
+	const taskDone = (index) => {
+		list[index]["done"] = !list[index]["done"];
+		saveTaskInAPI();
+		console.log(list[index]);
+
+		return list[index]["done"];
+	};
+	const printClass = (i) => {
+		let taskdone = "tareaa bg-success";
+		let taskNoDone = "tareaa";
+		if (list[i]["done"] === true) {
+			return taskdone;
+		} else {
+			return taskNoDone;
+		}
 	};
 
 	return (
@@ -103,8 +119,14 @@ const ToDoList = () => {
 				<div className="list-tasks">
 					{list.map((task, i) => {
 						return (
-							<div className="tareaa" key={i}>
+							<div className={printClass(i)} key={i}>
 								<p>{task.label}</p>
+								<span
+									onClick={() => {
+										taskDone(i);
+									}}>
+									check
+								</span>
 								<span
 									onClick={() => Delete(i)}
 									className="delete">
