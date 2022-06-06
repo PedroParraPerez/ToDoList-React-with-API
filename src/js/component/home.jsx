@@ -72,8 +72,8 @@ const ToDoList = () => {
 		return list[index]["done"];
 	};
 	const printClass = (i) => {
-		let taskdone = "tareaa bg-success";
-		let taskNoDone = "tareaa";
+		let taskdone = " text-muted text-decoration-line-through";
+		let taskNoDone = "text-dark";
 		if (list[i]["done"] === true) {
 			return taskdone;
 		} else {
@@ -119,19 +119,24 @@ const ToDoList = () => {
 				<div className="list-tasks">
 					{list.map((task, i) => {
 						return (
-							<div className={printClass(i)} key={i}>
-								<p>{task.label}</p>
-								<span
-									onClick={() => {
-										taskDone(i);
-									}}>
-									check
-								</span>
-								<span
-									onClick={() => Delete(i)}
-									className="delete">
-									🗑️
-								</span>
+							<div
+								className="tareaa d-flex justify-content-between"
+								key={i}>
+								<p className={printClass(i)}>{task.label}</p>
+								<div>
+									<span
+										className="done text-decoration"
+										onClick={() => {
+											taskDone(i);
+										}}>
+										{task.done == false ? "✔️" : "🚫"}
+									</span>
+									<span
+										onClick={() => Delete(i)}
+										className="delete">
+										🗑️
+									</span>
+								</div>
 							</div>
 						);
 					})}

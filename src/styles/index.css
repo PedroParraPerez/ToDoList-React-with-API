@@ -1,7 +1,8 @@
-body{
+body {
     background-color: rgb(248, 248, 193);
 }
-.wrap{
+
+.wrap {
     border: 2px solid brown;
     border-radius: 3rem;
     width: 17rem;
@@ -11,37 +12,43 @@ body{
     text-align: center;
     background-color: rgb(255, 255, 130);
 }
-.title{
+
+.title {
     margin-top: 1rem;
     color: brown;
     font-weight: bold;
 }
-.input-task{
-    
+
+.input-task {
+
     text-align: center;
     border-radius: 3rem;
     width: 80%;
-    
+
 }
-.label-task{
+
+.label-task {
     font-weight: bold;
     color: brown;
 }
-.validation{
+
+.validation {
     color: red;
 
 }
-.submit{
+
+.submit {
 
     background-color: brown;
     color: white;
     border-radius: 0.7rem;
-  margin-top: 3%;
-  padding: 0.5rem;
-   
+    margin-top: 3%;
+    padding: 0.5rem;
+
 }
-.list-tasks{
-    
+
+.list-tasks {
+
     width: 80%;
     min-height: 60%;
     border-radius: 1rem;
@@ -49,8 +56,9 @@ body{
     margin-top: 3%;
 
 }
-.delete:hover{
-  cursor: pointer;
+
+.delete:hover {
+    cursor: pointer;
 }
 
 .tareaa {
@@ -60,14 +68,16 @@ body{
     justify-content: space-between;
     padding: 3.5%;
 }
-.tareaa p{
+
+.tareaa p {
     height: auto;
     max-width: 80%;
-    margin-bottom:  0%;
+    margin-bottom: 0%;
 }
 
 
 
-.delete:hover{
+.delete:hover,
+.done:hover {
     cursor: pointer;
 }
